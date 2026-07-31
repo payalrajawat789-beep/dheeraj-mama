@@ -280,8 +280,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Sticky Navbar Shadow on Scroll
+  // Active Section Scroll Spy for Top Mobile Navigation & Desktop Header
+  const sections = document.querySelectorAll("section[id], header[id]");
+  const allNavLinks = document.querySelectorAll(".nav-link");
+
+  function updateActiveNavLink() {
+    let scrollY = window.pageYOffset;
+
+    sections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 120;
+      const sectionId = current.getAttribute("id");
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        allNavLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${sectionId}`) {
+            link.classList.add("active");
+            // Auto scroll active link into view in horizontal mobile navbar
+            if (window.innerWidth <= 768) {
+              link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            }
+          }
+        });
+      }
+    });
+  }
+
+  // Sticky Navbar Shadow & Active Link on Scroll
   window.addEventListener("scroll", () => {
+    updateActiveNavLink();
+
     if (window.scrollY > 40) {
       navbar?.classList.add("scrolled");
     } else {
