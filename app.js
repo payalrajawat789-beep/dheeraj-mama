@@ -54,13 +54,13 @@ const productsData = [
     categories: ["shorts", "kidswear"],
     tag: "New Arrival",
     images: ["assets/girls_printed_shorts.jpg"],
-    desc: "Cute and vibrant printed shorts for girls in floral, stripes, polka dots, tie-dye & heart patterns. Elastic waist with adjustable drawstrings.",
-    fabric: "Super-Soft Hosiery Cotton Knit",
-    gsm: "160 - 180 GSM",
+    desc: "Vibrant cotton printed shorts for girls in floral, stripes, polka dots, tie-dye & heart patterns. Available in 11, 12 & 13 inch lengths.",
+    fabric: "Cotton Print",
+    gsm: "11, 12, 13 Inch Length",
     pricing: [
-      { size: "Small (S)", price: "₹35 / pc" },
-      { size: "Medium (M)", price: "₹40 / pc" },
-      { size: "Large (L)", price: "₹45 / pc" }
+      { size: "XL (11 Inch)", price: "₹24 / pc" },
+      { size: "2XL (12 Inch)", price: "₹24 / pc" },
+      { size: "3XL (13 Inch)", price: "₹24 / pc" }
     ],
     moq: "40 Pieces / Assorted"
   },
