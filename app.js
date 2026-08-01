@@ -13,15 +13,19 @@ const productsData = [
     categories: ["tshirts", "kidswear"],
     tag: "Wholesale Hot",
     images: ["assets/gk_kids_half_sleeve.jpg"],
-    desc: "Premium multi-color printed kids round neck half sleeve t-shirts in bio-washed hosiery fabric (Ferrari, Lee Cooper, Ellen Solly, etc.). Soft ribbing & non-fading prints.",
-    fabric: "100% Combed Cotton / Bio-Wash Hosiery",
-    gsm: "180 - 200 GSM",
+    desc: "Premium printed kids round neck half sleeve t-shirts (Ferrari, Lee Cooper, Ellen Solly, etc.) in fine surplus hosiery fabric.",
+    fabric: "FINE SURPLUS",
+    gsm: "170 - 190 GSM",
     pricing: [
-      { size: "20 - 24 (Ages 2-5 Yrs)", price: "₹45 / pc" },
-      { size: "26 - 30 (Ages 6-9 Yrs)", price: "₹55 / pc" },
-      { size: "32 - 36 (Ages 10-14 Yrs)", price: "₹65 / pc" }
+      { size: "Size 0", price: "₹30 / pc" },
+      { size: "Size 1", price: "₹32 / pc" },
+      { size: "Size 2", price: "₹36 / pc" },
+      { size: "Size 3", price: "₹42 / pc" },
+      { size: "Size 4", price: "₹46 / pc" },
+      { size: "Size 5", price: "₹50 / pc" },
+      { size: "Size 6", price: "₹54 / pc" }
     ],
-    moq: "30 Pieces / Bundle"
+    moq: "30 Pieces / Set"
   },
   {
     id: "round-neck-half-sleeve",
