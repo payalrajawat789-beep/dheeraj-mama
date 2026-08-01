@@ -71,13 +71,13 @@ const productsData = [
     categories: ["kidswear", "underwear"],
     tag: "Daily Essential",
     images: ["assets/kids_cotton_chaddi.jpg"],
-    desc: "100% pure cotton breathable kids printed drawer / chaddi. Skin-friendly soft elastic band designed for all-day moisture control and comfort.",
-    fabric: "100% Pure Soft Cotton Hosiery",
-    gsm: "140 - 160 GSM",
+    desc: "Cotton printed kids drawer / chaddi with skin-friendly soft elastic band. Breathable everyday wear in 8 to 10 inch length.",
+    fabric: "COTTON PRINT",
+    gsm: "8 - 10 Inch Length",
     pricing: [
-      { size: "Small (Ages 1-3 Yrs)", price: "₹18 / pc" },
-      { size: "Medium (Ages 4-7 Yrs)", price: "₹22 / pc" },
-      { size: "Large (Ages 8-12 Yrs)", price: "₹26 / pc" }
+      { size: "Small (S)", price: "₹11 / pc" },
+      { size: "Medium (M)", price: "₹11 / pc" },
+      { size: "Large (L)", price: "₹11 / pc" }
     ],
     moq: "50 Pieces / Pack"
   },
