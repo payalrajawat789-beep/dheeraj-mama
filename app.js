@@ -17,13 +17,13 @@ const productsData = [
     fabric: "FINE SURPLUS",
     gsm: "170 - 190 GSM",
     pricing: [
-      { size: "Size 0", price: "₹30 / pc" },
-      { size: "Size 1", price: "₹32 / pc" },
-      { size: "Size 2", price: "₹36 / pc" },
-      { size: "Size 3", price: "₹42 / pc" },
-      { size: "Size 4", price: "₹46 / pc" },
-      { size: "Size 5", price: "₹50 / pc" },
-      { size: "Size 6", price: "₹54 / pc" }
+      { size: "Size 0", price: "₹30" },
+      { size: "Size 1", price: "₹32" },
+      { size: "Size 2", price: "₹36" },
+      { size: "Size 3", price: "₹42" },
+      { size: "Size 4", price: "₹46" },
+      { size: "Size 5", price: "₹50" },
+      { size: "Size 6", price: "₹54" }
     ],
     moq: "30 Pieces / Set"
   },
@@ -41,9 +41,9 @@ const productsData = [
     fabric: "FINE SURPLUS",
     gsm: "160 - 180 GSM",
     pricing: [
-      { size: "Medium (M)", price: "₹51 / pc" },
-      { size: "Large (L)", price: "₹55 / pc" },
-      { size: "Extra Large (XL)", price: "₹64 / pc" }
+      { size: "Medium (M)", price: "₹51" },
+      { size: "Large (L)", price: "₹55" },
+      { size: "Extra Large (XL)", price: "₹64" }
     ],
     moq: "24 Pieces / Pack"
   },
@@ -58,9 +58,7 @@ const productsData = [
     fabric: "Cotton Print",
     gsm: "11, 12, 13 Inch Length",
     pricing: [
-      { size: "XL (11 Inch)", price: "₹24 / pc" },
-      { size: "2XL (12 Inch)", price: "₹24 / pc" },
-      { size: "3XL (13 Inch)", price: "₹24 / pc" }
+      { size: "XL - 3XL (11\" - 13\")", price: "₹24" }
     ],
     moq: "40 Pieces / Assorted"
   },
@@ -75,9 +73,7 @@ const productsData = [
     fabric: "COTTON PRINT",
     gsm: "8 - 10 Inch Length",
     pricing: [
-      { size: "Small (S)", price: "₹11 / pc" },
-      { size: "Medium (M)", price: "₹11 / pc" },
-      { size: "Large (L)", price: "₹11 / pc" }
+      { size: "S, M, L (8\" - 10\")", price: "₹11" }
     ],
     moq: "50 Pieces / Pack"
   },
@@ -92,8 +88,7 @@ const productsData = [
     fabric: "Cotton Print",
     gsm: "9 - 10 Inch Length",
     pricing: [
-      { size: "Medium (M - 9 Inch)", price: "₹16 / pc" },
-      { size: "Large (L - 10 Inch)", price: "₹16 / pc" }
+      { size: "M, L (9\" - 10\")", price: "₹16" }
     ],
     moq: "36 Pieces / Bundle"
   }
