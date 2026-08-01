@@ -8,7 +8,7 @@ const PHONE_NUMBER = "919898487879";
 const productsData = [
   {
     id: "gk-kids-half-sleeve",
-    name: "GK Kids Half Sleeve T-Shirt",
+    name: "Round Kids Half Sleeve T-Shirt",
     category: "tshirts",
     categories: ["tshirts", "kidswear"],
     tag: "Wholesale Hot",
@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           <div class="product-card-footer">
             <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-wholesale-full">
-              <i class="fab fa-whatsapp"></i> Get Wholesale Price
+              <i class="fab fa-whatsapp"></i> Get Order
             </a>
           </div>
         </div>
@@ -515,7 +515,7 @@ function openQuickView(productId) {
         </div>
 
         <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="margin-top: auto; padding: 1rem; width: 100%; justify-content: center;">
-          <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Get Wholesale Price on WhatsApp
+          <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Get Order on WhatsApp
         </a>
       </div>
     </div>
