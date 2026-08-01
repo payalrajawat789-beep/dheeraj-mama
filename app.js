@@ -88,13 +88,12 @@ const productsData = [
     categories: ["shorts", "kidswear"],
     tag: "Trending",
     images: ["assets/kids_printed_shorts.jpg"],
-    desc: "Durable kids printed half pants in checks, camouflage, animal prints, and cartoon graphics. Deep side pocket & flexible elastic waistband.",
-    fabric: "Heavy Combed Cotton Hosiery",
-    gsm: "170 - 190 GSM",
+    desc: "Durable cotton printed shorts for kids with comfortable elastic waistband. Available in 9 to 10 inch lengths.",
+    fabric: "Cotton Print",
+    gsm: "9 - 10 Inch Length",
     pricing: [
-      { size: "18 - 24 (Ages 2-5 Yrs)", price: "₹38 / pc" },
-      { size: "26 - 30 (Ages 6-9 Yrs)", price: "₹48 / pc" },
-      { size: "32 - 36 (Ages 10-14 Yrs)", price: "₹58 / pc" }
+      { size: "Medium (M - 9 Inch)", price: "₹18 / pc" },
+      { size: "Large (L - 10 Inch)", price: "₹18 / pc" }
     ],
     moq: "36 Pieces / Bundle"
   }
