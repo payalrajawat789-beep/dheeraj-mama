@@ -92,8 +92,8 @@ const productsData = [
     fabric: "Cotton Print",
     gsm: "9 - 10 Inch Length",
     pricing: [
-      { size: "Medium (M - 9 Inch)", price: "₹18 / pc" },
-      { size: "Large (L - 10 Inch)", price: "₹18 / pc" }
+      { size: "Medium (M - 9 Inch)", price: "₹16 / pc" },
+      { size: "Large (L - 10 Inch)", price: "₹16 / pc" }
     ],
     moq: "36 Pieces / Bundle"
   }
