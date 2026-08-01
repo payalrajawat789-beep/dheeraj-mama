@@ -67,7 +67,6 @@ const productsData = [
     categories: ["kidswear", "underwear"],
     tag: "Daily Essential",
     images: ["assets/kids_cotton_chaddi.jpg"],
-    isPendingImageNote: true,
     desc: "100% pure cotton breathable kids printed drawer / chaddi. Skin-friendly soft elastic band designed for all-day moisture control and comfort.",
     fabric: "100% Pure Soft Cotton Hosiery",
     gsm: "140 - 160 GSM",
