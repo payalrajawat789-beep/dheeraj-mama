@@ -1,177 +1,112 @@
 /* ==========================================================================
-   JSR Dheeraj Hosiery & Ananya Sports (Traders) - Interactive Application Logic
+   JSR Dheeraj Hosiery & Ananya Sports (Traders) - Wholesale Garment Catalog
    ========================================================================== */
 
 const PHONE_NUMBER = "919898487879";
 
-// Products Data Array
+// Real Products Data Array (Arranged in exact requested order)
 const productsData = [
   {
-    id: "p1",
-    name: "Round Neck T-Shirts",
+    id: "gk-kids-half-sleeve",
+    name: "GK Kids Half Sleeve T-Shirt",
     category: "tshirts",
-    tag: "Best Seller",
-    image: "assets/round_neck_tshirts.jpg",
-    desc: "100% Combed & Bio-Washed Cotton round neck t-shirts available in 20+ vibrant plain colors. Ideal for printing & casual retail.",
-    fabric: "100% Cotton / Bio-Wash (180-220 GSM)",
-    sizes: "S, M, L, XL, XXL",
-    moq: "30 Pieces / Bundle",
-    colors: "Black, Navy, Royal Blue, White, Red, Maroon, Olive + 15 more",
-    features: "Pre-shrunk fabric, double needle stitched neckline, soft hand feel."
-  },
-  {
-    id: "p2",
-    name: "Polo T-Shirts",
-    category: "tshirts",
-    tag: "Premium",
-    image: "assets/polo_tshirts.jpg",
-    desc: "Classic Matty / Pique knit collared polo t-shirts with durable ribbed collars and cuffs. Excellent for corporate and casual wear.",
-    fabric: "Cotton-Poly Pique Matty (220-240 GSM)",
-    sizes: "M, L, XL, XXL",
-    moq: "24 Pieces",
-    colors: "Royal Blue, Navy, White, Charcoal, Black, Mustard",
-    features: "Durable collar stability, color-fast dyeing, premium button finish."
-  },
-  {
-    id: "p3",
-    name: "Sports T-Shirts",
-    category: "sportswear",
-    tag: "Activewear",
-    image: "assets/sports_tshirts.jpg",
-    desc: "High-performance sports t-shirts featuring contrast side panels and ventilation mesh for maximum agility during athletic activities.",
-    fabric: "Micro-Polyester Interlock (160 GSM)",
-    sizes: "M, L, XL, XXL",
-    moq: "30 Pieces",
-    colors: "Neon Green, Royal Blue, Bright Red, Orange, Navy",
-    features: "Lightweight, breathable panels, stretchable fit, quick moisture evaporation."
-  },
-  {
-    id: "p4",
-    name: "Dry Fit T-Shirts",
-    category: "sportswear",
-    tag: "Top Rated",
-    image: "assets/dryfit_tshirts.jpg",
-    desc: "Ultra-lightweight dry fit t-shirts engineered with sweat-wicking technology. Keeps athletes cool and comfortable.",
-    fabric: "100% Micro Polyester Dry-Fit Dot Knit",
-    sizes: "S, M, L, XL, XXL",
-    moq: "30 Pieces",
-    colors: "Melange Gray, Navy, Black, Electric Blue, Fluorescent Yellow",
-    features: "Quick-dry property, anti-bacterial finish, UV protection."
-  },
-  {
-    id: "p5",
-    name: "Track Pants",
-    category: "trackpants",
-    tag: "High Demand",
-    image: "assets/track_pants.jpg",
-    desc: "Durable athletic track pants with zipper pockets, elastic waistband, and internal drawstrings. Perfect for sports and gym.",
-    fabric: "Poly-NS / Super-Poly Heavy Fabric",
-    sizes: "M, L, XL, XXL",
-    moq: "20 Pieces",
-    colors: "Dark Navy, Black, Charcoal Gray, Light Gray",
-    features: "Dual deep zipper pockets, elastic ribbing, heavy duty stitching."
-  },
-  {
-    id: "p6",
-    name: "Lower (Sports Lower)",
-    category: "lower",
+    categories: ["tshirts", "kidswear"],
     tag: "Wholesale Hot",
-    image: "assets/cotton_lower.jpg",
-    desc: "Multi-utility daily wear sports lower crafted for athletic comfort. Designed with side piping and flexible stretch.",
-    fabric: "Poly-Cotton / Spandex Blend",
-    sizes: "M, L, XL, XXL",
-    moq: "24 Pieces",
-    colors: "Black, Dark Gray, Navy Blue, Wine",
-    features: "4-way stretch fabric, non-fading dyes, reinforced pocket seams."
+    images: ["assets/gk_kids_half_sleeve.jpg"],
+    desc: "Premium multi-color printed kids round neck half sleeve t-shirts in bio-washed hosiery fabric (Ferrari, Lee Cooper, Ellen Solly, etc.). Soft ribbing & non-fading prints.",
+    fabric: "100% Combed Cotton / Bio-Wash Hosiery",
+    gsm: "180 - 200 GSM",
+    pricing: [
+      { size: "20 - 24 (Ages 2-5 Yrs)", price: "₹45 / pc" },
+      { size: "26 - 30 (Ages 6-9 Yrs)", price: "₹55 / pc" },
+      { size: "32 - 36 (Ages 10-14 Yrs)", price: "₹65 / pc" }
+    ],
+    moq: "30 Pieces / Bundle"
   },
   {
-    id: "p7",
-    name: "Cotton Lower",
-    category: "lower",
-    tag: "Comfort Fit",
-    image: "assets/cotton_lower.jpg",
-    desc: "Super-soft pure cotton French Terry lower and joggers for relaxed daily lounging, home wear, and casual walking.",
-    fabric: "100% Cotton Loopknit / Terry (240 GSM)",
-    sizes: "M, L, XL, XXL",
-    moq: "20 Pieces",
-    colors: "Melange Gray, Black, Navy, Olive Green, Steel Blue",
-    features: "Breathable natural fabric, rib cuffs at ankle, soft inner finish."
+    id: "round-neck-half-sleeve",
+    name: "Round Neck Half Sleeve T-Shirt",
+    category: "tshirts",
+    categories: ["tshirts", "kidswear"],
+    tag: "Best Seller",
+    images: [
+      "assets/round_neck_half_sleeve_1.jpg",
+      "assets/round_neck_half_sleeve_2.jpg"
+    ],
+    desc: "Classic round neck half sleeve t-shirts with chest prints (Ferrari, Lee Cooper, Under Armour, Fastrack, Gucci). Soft breathable hosiery knit in multi-color packs.",
+    fabric: "Combed Cotton Hosiery Blend",
+    gsm: "175 - 190 GSM",
+    pricing: [
+      { size: "Small (28 - 30)", price: "₹50 / pc" },
+      { size: "Medium (32 - 34)", price: "₹60 / pc" },
+      { size: "Large (36 - 38)", price: "₹70 / pc" }
+    ],
+    moq: "24 Pieces / Pack"
   },
   {
-    id: "p8",
-    name: "Sports Shorts",
+    id: "girls-printed-shorts",
+    name: "Girls Printed Shorts",
     category: "shorts",
-    tag: "Summer Special",
-    image: "assets/sports_shorts.jpg",
-    desc: "Breathable athletic sports shorts with elastic waist and secure pockets. Ideal for running, football, cricket, and fitness.",
-    fabric: "Micro-Active / Dry Fit Poly",
-    sizes: "M, L, XL, XXL",
-    moq: "40 Pieces",
-    colors: "Black, Navy, Royal Blue, Red, Gray",
-    features: "Lightweight mobility, quick drying, durable drawstrings."
+    categories: ["shorts", "kidswear"],
+    tag: "New Arrival",
+    images: ["assets/girls_printed_shorts.jpg"],
+    desc: "Cute and vibrant printed shorts for girls in floral, stripes, polka dots, tie-dye & heart patterns. Elastic waist with adjustable drawstrings.",
+    fabric: "Super-Soft Hosiery Cotton Knit",
+    gsm: "160 - 180 GSM",
+    pricing: [
+      { size: "Small (S)", price: "₹35 / pc" },
+      { size: "Medium (M)", price: "₹40 / pc" },
+      { size: "Large (L)", price: "₹45 / pc" }
+    ],
+    moq: "40 Pieces / Assorted"
   },
   {
-    id: "p9",
-    name: "Men Capri (3/4th Pants)",
-    category: "capri",
+    id: "kids-cotton-chaddi",
+    name: "Kids Cotton Chaddi",
+    category: "kidswear",
+    categories: ["kidswear", "underwear"],
+    tag: "Daily Essential",
+    images: ["assets/kids_cotton_chaddi.jpg"],
+    isPendingImageNote: true,
+    desc: "100% pure cotton breathable kids printed drawer / chaddi. Skin-friendly soft elastic band designed for all-day moisture control and comfort.",
+    fabric: "100% Pure Soft Cotton Hosiery",
+    gsm: "140 - 160 GSM",
+    pricing: [
+      { size: "Small (Ages 1-3 Yrs)", price: "₹18 / pc" },
+      { size: "Medium (Ages 4-7 Yrs)", price: "₹22 / pc" },
+      { size: "Large (Ages 8-12 Yrs)", price: "₹26 / pc" }
+    ],
+    moq: "50 Pieces / Pack"
+  },
+  {
+    id: "kids-printed-shorts",
+    name: "Kids Printed Shorts",
+    category: "shorts",
+    categories: ["shorts", "kidswear"],
     tag: "Trending",
-    image: "assets/men_capri.jpg",
-    desc: "Comfortable knee-length 3/4th capris with multiple pockets and elastic waistband. Highly popular for summer retail stock.",
-    fabric: "Cotton-Poly Blend / Twill Matty",
-    sizes: "M, L, XL, XXL",
-    moq: "24 Pieces",
-    colors: "Beige, Olive, Dark Gray, Navy, Black",
-    features: "Knee length cut, multi-pocket convenience, soft waist feel."
-  },
-  {
-    id: "p10",
-    name: "Gym Wear Collection",
-    category: "gymwear",
-    tag: "Fitness Line",
-    image: "assets/gym_wear.jpg",
-    desc: "Specialized fitness wear including gym stringers, compression tops, and performance vests tailored for intense workouts.",
-    fabric: "Poly-Spandex / Elastane Active Stretch",
-    sizes: "S, M, L, XL",
-    moq: "30 Pieces",
-    colors: "Black, Gunmetal Gray, Army Green, Electric Blue",
-    features: "4-way compression stretch, ergonomic seam positioning, anti-odor."
-  },
-  {
-    id: "p11",
-    name: "Men's Sportswear Sets",
-    category: "sportswear",
-    tag: "Complete Set",
-    image: "assets/sports_tshirts.jpg",
-    desc: "Matching sportswear combos (T-Shirt + Shorts / Track Pants) packaged in bulk bundles for sports shops and club teams.",
-    fabric: "High-grade Dry-Fit & Micro Polyester",
-    sizes: "M, L, XL, XXL",
-    moq: "15 Sets",
-    colors: "Team Blue/White, Navy/Red, Black/Neon",
-    features: "Matching color schemes, club logo ready, high durability."
-  },
-  {
-    id: "p12",
-    name: "Kids Sportswear",
-    category: "kids",
-    tag: "Junior Range",
-    image: "assets/kids_sportswear.jpg",
-    desc: "Vibrant and durable kids sports t-shirts, track suits, and lowers designed for school sports and active children.",
-    fabric: "Soft Cotton-Poly Interlock (Skin Friendly)",
-    sizes: "24, 26, 28, 30, 32, 34, 36 (Ages 4-14)",
-    moq: "36 Pieces",
-    colors: "Bright Red, Yellow, Sky Blue, Royal Blue, Green",
-    features: "Skin safe dyes, extra seam strength for kids' active use."
+    images: ["assets/kids_printed_shorts.jpg"],
+    desc: "Durable kids printed half pants in checks, camouflage, animal prints, and cartoon graphics. Deep side pocket & flexible elastic waistband.",
+    fabric: "Heavy Combed Cotton Hosiery",
+    gsm: "170 - 190 GSM",
+    pricing: [
+      { size: "18 - 24 (Ages 2-5 Yrs)", price: "₹38 / pc" },
+      { size: "26 - 30 (Ages 6-9 Yrs)", price: "₹48 / pc" },
+      { size: "32 - 36 (Ages 10-14 Yrs)", price: "₹58 / pc" }
+    ],
+    moq: "36 Pieces / Bundle"
   }
 ];
 
-// DOM Elements
+// Track active slide indices for multi-image sliders
+const sliderState = {};
+
+// DOM Elements & Initialization
 document.addEventListener("DOMContentLoaded", () => {
   const productsGrid = document.getElementById("productsGrid");
   const searchInput = document.getElementById("searchInput");
   const tabButtons = document.querySelectorAll(".tab-btn");
   const modalBackdrop = document.getElementById("modalBackdrop");
   const modalClose = document.getElementById("modalClose");
-  const modalBody = document.getElementById("modalBody");
   const navbar = document.querySelector(".navbar");
   const backToTopBtn = document.getElementById("backToTop");
   const mobileToggle = document.getElementById("mobileToggle");
@@ -181,13 +116,20 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentCategory = "all";
   let searchQuery = "";
 
-  // Render Products Function
+  // Initialize Slider State
+  productsData.forEach(p => {
+    sliderState[p.id] = 0;
+  });
+
+  // Render Products Grid Function
   function renderProducts() {
     if (!productsGrid) return;
     productsGrid.innerHTML = "";
 
     const filtered = productsData.filter(item => {
-      const matchesCategory = (currentCategory === "all") || (item.category === currentCategory);
+      const matchesCategory = (currentCategory === "all") || 
+                              (item.category === currentCategory) || 
+                              (item.categories && item.categories.includes(currentCategory));
       const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                             item.desc.toLowerCase().includes(searchQuery.toLowerCase()) ||
                             item.fabric.toLowerCase().includes(searchQuery.toLowerCase());
@@ -196,10 +138,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (filtered.length === 0) {
       productsGrid.innerHTML = `
-        <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem;">
-          <i class="fas fa-box-open" style="font-size: 3rem; color: #94a3b8; margin-bottom: 1rem;"></i>
-          <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">No Garments Found</h3>
-          <p style="color: #64748b;">Try adjusting your search term or select another category tab above.</p>
+        <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; background: #ffffff; border-radius: 16px; border: 1px dashed #cbd5e1;">
+          <i class="fas fa-box-open" style="font-size: 3.5rem; color: #94a3b8; margin-bottom: 1rem;"></i>
+          <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem; color: #0f172a;">No Garments Found</h3>
+          <p style="color: #64748b;">Try adjusting your search query or select another category tab above.</p>
         </div>
       `;
       return;
@@ -208,30 +150,103 @@ document.addEventListener("DOMContentLoaded", () => {
     filtered.forEach(product => {
       const card = document.createElement("div");
       card.className = "product-card";
-      
-      const waMsg = encodeURIComponent(`Hello JSR Dheeraj Hosiery & Ananya Sports,\n\nI am interested in wholesale pricing for:\nProduct: ${product.name}\nMOQ: ${product.moq}\n\nPlease share catalog, color chart and wholesale rate list.`);
+      card.setAttribute("id", `card-${product.id}`);
+
+      const waMsg = encodeURIComponent(
+        `Hello JSR Dheeraj Hosiery & Ananya Sports,\n\nI am interested in wholesale pricing for:\nProduct: ${product.name}\nCloth Quality: ${product.fabric}\nGSM: ${product.gsm}\nMOQ: ${product.moq}\n\nPlease share wholesale catalog and current stock availability.`
+      );
       const waLink = `https://wa.me/${PHONE_NUMBER}?text=${waMsg}`;
 
+      // Image Section HTML (Single image vs Gallery slider)
+      let imageHtml = "";
+      if (product.images.length > 1) {
+        const activeIdx = sliderState[product.id] || 0;
+        imageHtml = `
+          <div class="product-img-wrap has-slider" id="wrap-${product.id}">
+            <span class="product-tag">${product.tag}</span>
+            <span class="gallery-badge"><i class="fas fa-images"></i> ${product.images.length} Photos</span>
+            <div class="product-slider-container">
+              <img src="${product.images[activeIdx]}" alt="${product.name} - View ${activeIdx + 1}" class="product-active-img" id="img-${product.id}">
+            </div>
+            <button class="slider-arrow prev-arrow" onclick="slideImage('${product.id}', -1, event)" title="Previous photo">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-arrow next-arrow" onclick="slideImage('${product.id}', 1, event)" title="Next photo">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="slider-dots">
+              ${product.images.map((_, idx) => `
+                <span class="dot ${idx === activeIdx ? 'active' : ''}" onclick="setSlide('${product.id}', ${idx}, event)"></span>
+              `).join('')}
+            </div>
+            <button class="product-quick-view" onclick="openQuickView('${product.id}')" title="Quick Specs">
+              <i class="fas fa-expand"></i>
+            </button>
+          </div>
+        `;
+      } else {
+        imageHtml = `
+          <div class="product-img-wrap" onclick="openQuickView('${product.id}')">
+            <span class="product-tag">${product.tag}</span>
+            ${product.isPendingImageNote ? `<span class="pending-badge"><i class="fas fa-camera"></i> Official Stock Photo</span>` : ''}
+            <img src="${product.images[0]}" alt="${product.name}" loading="lazy">
+            <button class="product-quick-view" onclick="openQuickView('${product.id}')" title="Quick Specs">
+              <i class="fas fa-expand"></i>
+            </button>
+          </div>
+        `;
+      }
+
+      // Price table HTML
+      const priceRows = product.pricing.map(p => `
+        <tr>
+          <td class="size-col">${p.size}</td>
+          <td class="price-col">${p.price}</td>
+        </tr>
+      `).join('');
+
       card.innerHTML = `
-        <div class="product-img-wrap">
-          <span class="product-tag">${product.tag}</span>
-          <img src="${product.image}" alt="${product.name}" loading="lazy">
-          <button class="product-quick-view" onclick="openQuickView('${product.id}')" title="Quick Specs">
-            <i class="fas fa-eye"></i>
-          </button>
-        </div>
+        ${imageHtml}
         <div class="product-content">
           <h3 class="product-title">${product.name}</h3>
           <p class="product-desc">${product.desc}</p>
-          <div class="product-meta">
-            <span>Fabric: <strong>${product.fabric.split('/')[0]}</strong></span>
-            <span>MOQ: <strong>${product.moq}</strong></span>
+          
+          <div class="product-specs-grid">
+            <div class="spec-box">
+              <span class="spec-label"><i class="fas fa-shirt"></i> Quality</span>
+              <span class="spec-val">${product.fabric}</span>
+            </div>
+            <div class="spec-box">
+              <span class="spec-label"><i class="fas fa-weight-hanging"></i> GSM</span>
+              <span class="spec-val">${product.gsm}</span>
+            </div>
           </div>
-          <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> Get Wholesale Price
-          </a>
+
+          <div class="price-table-container">
+            <div class="price-table-title">
+              <i class="fas fa-tags"></i> Size & Wholesale Price Table
+            </div>
+            <table class="card-price-table">
+              <thead>
+                <tr>
+                  <th>Size / Group</th>
+                  <th style="text-align: right;">Price (Wholesale)</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${priceRows}
+              </tbody>
+            </table>
+          </div>
+
+          <div class="product-card-footer">
+            <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-wholesale-full">
+              <i class="fab fa-whatsapp"></i> Get Wholesale Price
+            </a>
+          </div>
         </div>
       `;
+
       productsGrid.appendChild(card);
     });
   }
@@ -269,7 +284,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Close mobile menu on clicking nav link
     document.querySelectorAll(".nav-link").forEach(link => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("active");
@@ -280,13 +294,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Active Section Scroll Spy for Top Mobile Navigation & Desktop Header
-  const sections = document.querySelectorAll("section[id], header[id]");
+  // Active Section Scroll Spy
+  const sections = document.querySelectorAll("section[id]");
   const allNavLinks = document.querySelectorAll(".nav-link");
 
   function updateActiveNavLink() {
     let scrollY = window.pageYOffset;
-
     sections.forEach(current => {
       const sectionHeight = current.offsetHeight;
       const sectionTop = current.offsetTop - 120;
@@ -297,20 +310,15 @@ document.addEventListener("DOMContentLoaded", () => {
           link.classList.remove("active");
           if (link.getAttribute("href") === `#${sectionId}`) {
             link.classList.add("active");
-            // Auto scroll active link into view in horizontal mobile navbar
-            if (window.innerWidth <= 768) {
-              link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-            }
           }
         });
       }
     });
   }
 
-  // Sticky Navbar Shadow & Active Link on Scroll
+  // Sticky Navbar & Scroll Events
   window.addEventListener("scroll", () => {
     updateActiveNavLink();
-
     if (window.scrollY > 40) {
       navbar?.classList.add("scrolled");
     } else {
@@ -324,7 +332,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Back to top scroll
   if (backToTopBtn) {
     backToTopBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -341,14 +348,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const customerType = document.getElementById("formType").value;
       const requirement = document.getElementById("formRequirement").value;
 
-      const message = `Hello JSR Dheeraj Hosiery & Ananya Sports (Traders),\n\n*New Wholesale Inquiry*\n👤 Name: ${name}\n📱 Phone: ${phone}\n🏙️ City: ${city}\n🏪 Business Type: ${customerType}\n📦 Requirements: ${requirement}\n\nPlease share pricing details and wholesale catalog.`;
+      const message = `Hello JSR Dheeraj Hosiery & Ananya Sports (Traders),\n\n*New Wholesale Inquiry*\n👤 Name: ${name}\n📱 Phone: ${phone}\n🏙️ City: ${city}\n🏪 Business Type: ${customerType}\n📦 Requirements: ${requirement}\n\nPlease share wholesale catalog & price details.`;
 
       const targetUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`;
       window.open(targetUrl, '_blank');
     });
   }
 
-  // Close Modal Handler
+  // Close Modal Handlers
   if (modalClose) {
     modalClose.addEventListener("click", closeModal);
   }
@@ -359,7 +366,60 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Category Quick Filter from Category Cards
+// Image Slider Control Functions
+function slideImage(productId, direction, e) {
+  if (e) e.stopPropagation();
+  const product = productsData.find(p => p.id === productId);
+  if (!product || !product.images) return;
+
+  let currentIdx = sliderState[productId] || 0;
+  currentIdx = (currentIdx + direction + product.images.length) % product.images.length;
+  sliderState[productId] = currentIdx;
+
+  const imgElem = document.getElementById(`img-${productId}`);
+  if (imgElem) {
+    imgElem.style.opacity = "0.4";
+    setTimeout(() => {
+      imgElem.src = product.images[currentIdx];
+      imgElem.style.opacity = "1";
+    }, 120);
+  }
+
+  const wrapElem = document.getElementById(`wrap-${productId}`);
+  if (wrapElem) {
+    const dots = wrapElem.querySelectorAll(".dot");
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle("active", idx === currentIdx);
+    });
+  }
+}
+
+function setSlide(productId, slideIdx, e) {
+  if (e) e.stopPropagation();
+  const product = productsData.find(p => p.id === productId);
+  if (!product || !product.images) return;
+
+  sliderState[productId] = slideIdx;
+
+  const imgElem = document.getElementById(`img-${productId}`);
+  if (imgElem) {
+    imgElem.style.opacity = "0.4";
+    setTimeout(() => {
+      imgElem.src = product.images[slideIdx];
+      imgElem.style.opacity = "1";
+    }, 120);
+  }
+
+  const wrapElem = document.getElementById(`wrap-${productId}`);
+  if (wrapElem) {
+    const dots = wrapElem.querySelectorAll(".dot");
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle("active", idx === slideIdx);
+    });
+  }
+}
+
+// Category Filter Helper
 function filterByCategory(catName) {
   const tabBtn = document.querySelector(`.tab-btn[data-category="${catName}"]`);
   if (tabBtn) {
@@ -371,7 +431,7 @@ function filterByCategory(catName) {
   }
 }
 
-// Global Quick View Function
+// Quick View Modal Popup
 function openQuickView(productId) {
   const item = productsData.find(p => p.id === productId);
   if (!item) return;
@@ -380,44 +440,80 @@ function openQuickView(productId) {
   const modalBody = document.getElementById("modalBody");
   if (!modalBackdrop || !modalBody) return;
 
-  const waMsg = encodeURIComponent(`Hello JSR Dheeraj Hosiery & Ananya Sports,\n\nI want to inquire about bulk wholesale order for:\nItem: ${item.name}\nFabric: ${item.fabric}\nMOQ: ${item.moq}\n\nPlease send wholesale price per piece and available color options.`);
+  const waMsg = encodeURIComponent(
+    `Hello JSR Dheeraj Hosiery & Ananya Sports,\n\nI want to inquire about bulk wholesale order for:\nItem: ${item.name}\nCloth Quality: ${item.fabric}\nGSM: ${item.gsm}\nMOQ: ${item.moq}\n\nPlease send wholesale price per piece and color catalog.`
+  );
   const waLink = `https://wa.me/${PHONE_NUMBER}?text=${waMsg}`;
+
+  let modalGalleryHtml = "";
+  if (item.images.length > 1) {
+    modalGalleryHtml = `
+      <div class="modal-gallery">
+        <div class="modal-main-img-box">
+          <img src="${item.images[0]}" id="modalMainImg" alt="${item.name}">
+        </div>
+        <div class="modal-thumbs">
+          ${item.images.map((img, idx) => `
+            <img src="${img}" class="modal-thumb ${idx === 0 ? 'active' : ''}" onclick="changeModalImg('${img}', this)" alt="Thumbnail ${idx+1}">
+          `).join('')}
+        </div>
+      </div>
+    `;
+  } else {
+    modalGalleryHtml = `
+      <div class="modal-img-wrap">
+        <img src="${item.images[0]}" alt="${item.name}">
+      </div>
+    `;
+  }
+
+  const modalPriceRows = item.pricing.map(p => `
+    <tr>
+      <td style="padding: 0.5rem 0.75rem;"><strong>${p.size}</strong></td>
+      <td style="padding: 0.5rem 0.75rem; text-align: right; color: var(--primary); font-weight: 700;">${p.price}</td>
+    </tr>
+  `).join('');
 
   modalBody.innerHTML = `
     <div class="modal-grid">
-      <div class="modal-img-wrap">
-        <img src="${item.image}" alt="${item.name}">
-      </div>
+      ${modalGalleryHtml}
       <div class="modal-details">
         <span class="badge badge-primary" style="align-self: flex-start; margin-bottom: 0.5rem;">${item.tag}</span>
         <h3 class="modal-title">${item.name}</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem;">${item.desc}</p>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem;">${item.desc}</p>
         
         <div class="modal-specs">
           <div class="spec-item">
-            <span>Fabric Quality</span>
+            <span>Cloth Quality</span>
             <span>${item.fabric}</span>
           </div>
           <div class="spec-item">
-            <span>Available Sizes</span>
-            <span>${item.sizes}</span>
+            <span>Fabric GSM</span>
+            <span>${item.gsm}</span>
           </div>
           <div class="spec-item">
-            <span>Minimum Order Quantity</span>
+            <span>Minimum Order (MOQ)</span>
             <span>${item.moq}</span>
-          </div>
-          <div class="spec-item">
-            <span>Color Options</span>
-            <span>${item.colors}</span>
-          </div>
-          <div class="spec-item">
-            <span>Key Feature</span>
-            <span>${item.features}</span>
           </div>
         </div>
 
-        <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="margin-top: auto; padding: 1rem;">
-          <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Ask Wholesale Price on WhatsApp
+        <div style="margin: 1.25rem 0;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem;">Wholesale Rate Table</h4>
+          <table class="card-price-table" style="width: 100%; border: 1px solid var(--border-color); border-radius: 8px;">
+            <thead>
+              <tr style="background: #f8fafc;">
+                <th style="padding: 0.5rem 0.75rem;">Size Group</th>
+                <th style="padding: 0.5rem 0.75rem; text-align: right;">Wholesale Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${modalPriceRows}
+            </tbody>
+          </table>
+        </div>
+
+        <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="margin-top: auto; padding: 1rem; width: 100%; justify-content: center;">
+          <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Get Wholesale Price on WhatsApp
         </a>
       </div>
     </div>
@@ -425,6 +521,16 @@ function openQuickView(productId) {
 
   modalBackdrop.classList.add("active");
   document.body.style.overflow = "hidden";
+}
+
+function changeModalImg(imgSrc, thumbElem) {
+  const modalMainImg = document.getElementById("modalMainImg");
+  if (modalMainImg) {
+    modalMainImg.src = imgSrc;
+  }
+  const thumbs = document.querySelectorAll(".modal-thumb");
+  thumbs.forEach(t => t.classList.remove("active"));
+  thumbElem.classList.add("active");
 }
 
 function closeModal() {
