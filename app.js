@@ -37,13 +37,13 @@ const productsData = [
       "assets/round_neck_half_sleeve_1.jpg",
       "assets/round_neck_half_sleeve_2.jpg"
     ],
-    desc: "Classic round neck half sleeve t-shirts with chest prints (Ferrari, Lee Cooper, Under Armour, Fastrack, Gucci). Soft breathable hosiery knit in multi-color packs.",
-    fabric: "Combed Cotton Hosiery Blend",
-    gsm: "175 - 190 GSM",
+    desc: "Classic round neck half sleeve t-shirts with brand chest prints (Ferrari, Lee Cooper, Under Armour, Fastrack, Gucci) in fine surplus fabric.",
+    fabric: "FINE SURPLUS",
+    gsm: "160 - 180 GSM",
     pricing: [
-      { size: "Small (28 - 30)", price: "₹50 / pc" },
-      { size: "Medium (32 - 34)", price: "₹60 / pc" },
-      { size: "Large (36 - 38)", price: "₹70 / pc" }
+      { size: "Medium (M)", price: "₹51 / pc" },
+      { size: "Large (L)", price: "₹55 / pc" },
+      { size: "Extra Large (XL)", price: "₹64 / pc" }
     ],
     moq: "24 Pieces / Pack"
   },
