@@ -122,6 +122,25 @@ const productsData = [
       { size: "Size 24 - 28", price: "₹57" }
     ],
     moq: "30 Pieces / Set"
+  },
+  {
+    id: "xport-lpnt-surplus-shorts",
+    name: "XPORT LPNT SURPLUS SHORTS",
+    category: "shorts",
+    categories: ["shorts", "kidswear"],
+    tag: "3 Photo Gallery",
+    images: [
+      "assets/xport_lpnt_shorts_1.jpg",
+      "assets/xport_lpnt_shorts_2.jpg",
+      "assets/xport_lpnt_shorts_3.jpg"
+    ],
+    desc: "Export LPNT surplus printed shorts for kids with brand chest & thigh prints (Hero, KTM, Rider, Star, Crazy Boy, Miron, Dragon, Spartan, Sports). Multi-color assortment set.",
+    fabric: "XPORT LPNT SURPLUS",
+    gsm: "Export Surplus Quality",
+    pricing: [
+      { size: "S, M, L", price: "₹38" }
+    ],
+    moq: "30 Pieces / Set"
   }
 ];
 
