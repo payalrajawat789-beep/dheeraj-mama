@@ -91,6 +91,21 @@ const productsData = [
       { size: "M, L (9\" - 10\")", price: "₹16" }
     ],
     moq: "36 Pieces / Bundle"
+  },
+  {
+    id: "xport-drp-short",
+    name: "XPORT DRP SHORT",
+    category: "shorts",
+    categories: ["shorts", "kidswear"],
+    tag: "New Arrival",
+    images: ["assets/xport_drp_shorts.jpg"],
+    desc: "Export surplus LPNT kids printed drop shorts with smooth drawstring & elastic band. Comfortable, durable everyday wear.",
+    fabric: "XPORT LPNT SURPLUS",
+    gsm: "Export Surplus Quality",
+    pricing: [
+      { size: "S, M, L", price: "₹30" }
+    ],
+    moq: "30 Pieces / Set"
   }
 ];
 
@@ -109,6 +124,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileToggle = document.getElementById("mobileToggle");
   const navLinks = document.querySelector(".nav-links");
   const contactForm = document.getElementById("wholesaleInquiryForm");
+
+  // Update total products count on category tab button dynamically
+  const allTabBtn = document.querySelector('.tab-btn[data-category="all"]');
+  if (allTabBtn) {
+    allTabBtn.textContent = `All Products (${productsData.length})`;
+  }
 
   let currentCategory = "all";
   let searchQuery = "";
