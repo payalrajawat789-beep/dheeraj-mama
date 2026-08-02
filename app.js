@@ -11,7 +11,6 @@ const productsData = [
     name: "Round Kids Half Sleeve T-Shirt",
     category: "tshirts",
     categories: ["tshirts", "kidswear"],
-    tag: "Wholesale Hot",
     images: ["assets/gk_kids_half_sleeve.jpg"],
     desc: "Premium printed kids round neck half sleeve t-shirts (Ferrari, Lee Cooper, Ellen Solly, etc.) in fine surplus hosiery fabric.",
     fabric: "FINE SURPLUS",
@@ -32,7 +31,6 @@ const productsData = [
     name: "Round Neck Half Sleeve T-Shirt",
     category: "tshirts",
     categories: ["tshirts", "kidswear"],
-    tag: "Best Seller",
     images: [
       "assets/round_neck_half_sleeve_1.jpg",
       "assets/round_neck_half_sleeve_2.jpg"
@@ -52,7 +50,6 @@ const productsData = [
     name: "Girls Printed Shorts",
     category: "shorts",
     categories: ["shorts", "kidswear"],
-    tag: "New Arrival",
     images: ["assets/girls_printed_shorts.jpg"],
     desc: "Vibrant cotton printed shorts for girls in floral, stripes, polka dots, tie-dye & heart patterns. Available in 11, 12 & 13 inch lengths.",
     fabric: "Cotton Print",
@@ -67,7 +64,6 @@ const productsData = [
     name: "Kids Cotton Chaddi",
     category: "kidswear",
     categories: ["kidswear", "underwear"],
-    tag: "Daily Essential",
     images: ["assets/kids_cotton_chaddi.jpg"],
     desc: "Cotton printed kids drawer / chaddi with skin-friendly soft elastic band. Breathable everyday wear in 8 to 10 inch length.",
     fabric: "COTTON PRINT",
@@ -82,7 +78,6 @@ const productsData = [
     name: "Kids Printed Shorts",
     category: "shorts",
     categories: ["shorts", "kidswear"],
-    tag: "Trending",
     images: ["assets/kids_printed_shorts.jpg"],
     desc: "Durable cotton printed shorts for kids with comfortable elastic waistband. Available in 9 to 10 inch lengths.",
     fabric: "Cotton Print",
@@ -97,7 +92,6 @@ const productsData = [
     name: "XPORT DRP SHORT",
     category: "shorts",
     categories: ["shorts", "kidswear"],
-    tag: "New Arrival",
     images: ["assets/xport_drp_shorts.jpg"],
     desc: "Export surplus LPNT kids printed drop shorts with smooth drawstring & elastic band. Comfortable, durable everyday wear.",
     fabric: "XPORT LPNT SURPLUS",
@@ -112,7 +106,6 @@ const productsData = [
     name: "XPORT PANT",
     category: "lowers",
     categories: ["lowers", "kidswear"],
-    tag: "Wholesale Hot",
     images: ["assets/xport_pant.jpg"],
     desc: "Premium Xport LPNT surplus track pants / lowers with brand prints (Reebok, Monster, Lee Cooper, Fila) and soft elastic waistband.",
     fabric: "XPORT LPNT SURPLUS",
@@ -128,7 +121,6 @@ const productsData = [
     name: "XPORT LPNT SURPLUS SHORTS",
     category: "shorts",
     categories: ["shorts", "kidswear"],
-    tag: "3 Photo Gallery",
     images: [
       "assets/xport_lpnt_shorts_1.jpg",
       "assets/xport_lpnt_shorts_2.jpg",
@@ -216,7 +208,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const activeIdx = sliderState[product.id] || 0;
         imageHtml = `
           <div class="product-img-wrap has-slider" id="wrap-${product.id}">
-            <span class="product-tag">${product.tag}</span>
             <span class="gallery-badge"><i class="fas fa-images"></i> ${product.images.length} Photos</span>
             <div class="product-slider-container">
               <img src="${product.images[activeIdx]}" alt="${product.name} - View ${activeIdx + 1}" class="product-active-img" id="img-${product.id}">
@@ -240,7 +231,6 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         imageHtml = `
           <div class="product-img-wrap" onclick="openQuickView('${product.id}')">
-            <span class="product-tag">${product.tag}</span>
             ${product.isPendingImageNote ? `<span class="pending-badge"><i class="fas fa-camera"></i> Official Stock Photo</span>` : ''}
             <img src="${product.images[0]}" alt="${product.name}" loading="lazy">
             <button class="product-quick-view" onclick="openQuickView('${product.id}')" title="Quick Specs">
@@ -531,7 +521,6 @@ function openQuickView(productId) {
     <div class="modal-grid">
       ${modalGalleryHtml}
       <div class="modal-details">
-        <span class="badge badge-primary" style="align-self: flex-start; margin-bottom: 0.5rem;">${item.tag}</span>
         <h3 class="modal-title">${item.name}</h3>
         <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.25rem;">${item.desc}</p>
         
