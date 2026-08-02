@@ -106,6 +106,22 @@ const productsData = [
       { size: "S, M, L", price: "₹30" }
     ],
     moq: "30 Pieces / Set"
+  },
+  {
+    id: "xport-pant",
+    name: "XPORT PANT",
+    category: "lowers",
+    categories: ["lowers", "kidswear"],
+    tag: "Wholesale Hot",
+    images: ["assets/xport_pant.jpg"],
+    desc: "Premium Xport LPNT surplus track pants / lowers with brand prints (Reebok, Monster, Lee Cooper, Fila) and soft elastic waistband.",
+    fabric: "XPORT LPNT SURPLUS",
+    gsm: "Export Surplus Quality",
+    pricing: [
+      { size: "Size 18 - 22", price: "₹46" },
+      { size: "Size 24 - 28", price: "₹57" }
+    ],
+    moq: "30 Pieces / Set"
   }
 ];
 
